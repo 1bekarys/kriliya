@@ -46,8 +46,8 @@
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:700}
     .logo{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow);}
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:var(--radius); background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1020; font-weight:700; box-shadow:var(--shadow); border:none; cursor:pointer}
+    .navlinks{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:var(--radius); background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; font-weight:700; box-shadow:var(--shadow); border:none; cursor:pointer}
     .btn:hover{filter:brightness(1.05)}
     .btn:focus{outline:3px solid var(--ring); outline-offset:2px}
     .btn.secondary{background:#1f2937; color:var(--text); font-weight:600}
@@ -87,14 +87,25 @@
 
     footer{border-top:1px solid rgba(148,163,184,.12); padding:26px 0; color:var(--muted)}
 
+    /* адаптив */
     @media (max-width: 900px){
       .hero .wrap{grid-template-columns:1fr}
-      .headline{font-size:36px}
+      .headline{font-size:32px}
+      .grid{grid-template-columns:1fr}
+      .span-6,.span-12{grid-column:span 1}
+      .nav{flex-wrap:wrap; gap:10px}
+    }
+
+    @media (max-width: 600px){
+      .headline{font-size:26px}
+      .lead{font-size:16px}
+      .btn{padding:8px 12px; font-size:14px}
+      .container{padding:0 12px}
     }
   </style>
 </head>
 <body>
-  <a class="pill" href="#content" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">К основному содержимому</a>
+  <a class="pill" href="#content" style="position:absolute; left:-9999px;">К основному содержимому</a>
 
   <header>
     <div class="container nav">
@@ -107,7 +118,7 @@
         <a href="#projects">Инициативы</a>
         <a href="#help">Как помочь</a>
         <a href="#contacts">Контакты</a>
-        <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener" aria-label="Перейти в Telegram группу"></a>
+        <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Telegram</a>
       </nav>
     </div>
   </header>
@@ -124,10 +135,10 @@
             <a class="btn secondary" href="#help">Сделать вклад</a>
           </div>
         </div>
-        <div class="card" aria-label="Кратко о проектах">
+        <div class="card">
           <h2 style="margin-top:0">Две инициативы — одна цель</h2>
-          <p><strong>Дети Вселенной</strong> — благотворительный проект поддержки детей, оставшихся без попечения родителей и находящихся в больницах. Мы помогаем, чтобы у детей не формировался синдром белого потолка — чувства одиночества и изоляции.</p>
-          <p><strong>Подарки радости</strong> — создание и передача персональных подарков для ребят из детских домов и больниц, чтобы у каждого был повод улыбнуться.</p>
+          <p><strong>Дети Вселенной</strong> — благотворительный проект поддержки детей, оставшихся без попечения родителей и находящихся в больницах.</p>
+          <p><strong>Подарки радости</strong> — создание и передача персональных подарков для ребят из детских домов и больниц.</p>
         </div>
       </div>
     </section>
@@ -136,21 +147,11 @@
       <div class="container grid">
         <div class="card span-6 project">
           <h2>Дети Вселенной</h2>
-          <p>Поддерживаем детей, которые временно или постоянно находятся в лечебных учреждениях без родителей. Наша задача — внимание, общение и развивающие занятия, чтобы помочь справиться с тревогой и рутиной больничных стен.</p>
-          <ul>
-            <li>Тёплые визиты волонтёров</li>
-            <li>Игры, чтение, арт-терапия</li>
-            <li>Настольные и развивающие материалы</li>
-          </ul>
+          <p>Поддерживаем детей, которые временно или постоянно находятся в лечебных учреждениях без родителей.</p>
         </div>
         <div class="card span-6 project">
           <h2>Подарки радости</h2>
-          <p>Собираем именные наборы и сюрпризы для детей из детских домов и пациентов детских отделений. Каждый подарок — знак внимания и поддержки.</p>
-          <ul>
-            <li>Сбор и упаковка подарков</li>
-            <li>Адресная передача</li>
-            <li>Фото- и видеоотчёты при согласии учреждений</li>
-          </ul>
+          <p>Собираем именные наборы и сюрпризы для детей из детских домов и пациентов детских отделений.</p>
         </div>
       </div>
     </section>
@@ -161,20 +162,20 @@
           <h2>Как это работает</h2>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">1. Связываемся с учреждениями</h3>
-          <p>Мы поддерживаем контакт с больницами и детскими домами, чтобы понимать актуальные потребности детей.</p>
+          <h3>1. Связываемся с учреждениями</h3>
+          <p>Мы поддерживаем контакт с больницами и детскими домами.</p>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">2. Собираем волонтёров и ресурсы</h3>
-          <p>Формируем команды, распределяем задачи, собираем подарки и материалы для занятий.</p>
+          <h3>2. Собираем волонтёров</h3>
+          <p>Формируем команды, распределяем задачи, собираем подарки и материалы.</p>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">3. Визиты и подарки</h3>
-          <p>Проводим встречи, игры и мастер‑классы, передаём подарки адресно и бережно.</p>
+          <h3>3. Визиты и подарки</h3>
+          <p>Проводим встречи, игры и мастер‑классы, передаём подарки.</p>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">4. Отчётность и обратная связь</h3>
-          <p>Публикуем краткие отчёты, делимся историями и благодарностями (с разрешения учреждений).</p>
+          <h3>4. Отчётность и обратная связь</h3>
+          <p>Публикуем отчёты, делимся историями и благодарностями.</p>
         </div>
       </div>
     </section>
@@ -185,30 +186,17 @@
           <h2>Как помочь</h2>
         </div>
         <div class="card span-6 donate">
-          <h3 style="margin-top:0">Реквизиты для пожертвований</h3>
-          <pre class="requisites">Получатель: <strong>ИП/Фонд \u00abКрылья\u00bb</strong>
+          <h3>Реквизиты для пожертвований</h3>
+          <pre class="requisites">Получатель: ИП/Фонд «Крылья»
 БИН/ИНН: 000 000 000 000
 Банк: Ваш банк
 БИК: XXXXXXXX
-IBAN/Р/с: KZ00 0000 0000 0000 0000
-Назначение платежа: Благотворительное пожертвование
-Комментарий: Имя, телефон (по желанию)</pre>
-          <div class="cta">
-            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Задать вопрос в Telegram</a>
-          </div>
+IBAN: KZ00 0000 0000 0000 0000
+Назначение: Благотворительное пожертвование</pre>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">Стать волонтёром</h3>
-          <p>Присоединяйтесь к нашим выездам в больницы и детские дома. Мы обучим и поддержим.</p>
-          <ul>
-            <li>От 6 часа в неделю</li>
-            <li>Поддержка координатора</li>
-            <li>Сообщество единомышленников</li>
-          </ul>
-          <div class="cta">
-            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Вступить в группу</a>
-            <a class="btn secondary" href="#contacts">Оставить контакты</a>
-          </div>
+          <h3>Стать волонтёром</h3>
+          <p>Присоединяйтесь к нашим выездам в больницы и детские дома.</p>
         </div>
       </div>
     </section>
@@ -218,23 +206,23 @@ IBAN/Р/с: KZ00 0000 0000 0000 0000
         <div class="span-12">
           <h2>Контакты</h2>
         </div>
-        <div class="card span-6" style="color:#1e3a8a;">
-          <h3 style="margin-top:0">Связаться с нами</h3>
+        <div class="card span-6">
+          <h3>Связаться с нами</h3>
           <p>Телефон: <a href="tel:+77000000000">+7 (700) 000‑00‑00</a></p>
           <p>E‑mail: <a href="mailto:hello@krylya.org">hello@krylya.org</a></p>
           <p>Telegram: <a href="https://t.me/krylyia" target="_blank" rel="noopener">@krylyia</a></p>
         </div>
         <div class="card span-6">
-          <h3 style="margin-top:0">Форма обратной связи</h3>
+          <h3>Форма обратной связи</h3>
           <form id="contact-form" onsubmit="sendMsg(event)">
             <label for="name">Ваше имя</label><br>
-            <input id="name" name="name" required style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#ffffff; color:var(--text)" />
+            <input id="name" name="name" required style="width:100%; margin:6px 0 12px; padding:10px 12px;" />
             <label for="email">E‑mail или телефон</label><br>
-            <input id="email" name="email" required style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#ffffff; color:var(--text)" />
+            <input id="email" name="email" required style="width:100%; margin:6px 0 12px; padding:10px 12px;" />
             <label for="message">Сообщение</label><br>
-            <textarea id="message" name="message" rows="4" style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#ffffff; color:var(--text)"></textarea>
+            <textarea id="message" name="message" rows="4" style="width:100%; margin:6px 0 12px; padding:10px 12px;"></textarea>
             <button class="btn" type="submit">Отправить</button>
-            <p id="form-status" class="muted" style="color:var(--muted); margin-top:10px"></p>
+            <p id="form-status" class="muted"></p>
           </form>
         </div>
       </div>
