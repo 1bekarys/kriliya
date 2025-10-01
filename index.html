@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Крылья — благотворительный проект</title>
+  <meta name="description" content="Крылья объединяет два общественных проекта: Дети Вселенной и Подарки радости, направленные на поддержку детей из больниц и детских домов." />
+  <meta property="og:title" content="Крылья — благотворительный проект" />
+  <meta property="og:description" content="Поддержка детей в больницах и детских домах: Дети Вселенной и Подарки радости." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/edf2ff/0a0a0a&text=%D0%9A%D1%80%D1%8B%D0%BB%D1%8C%D1%8F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#f9fafb;          
+  --panel:#ffffff;       
+  --text:#000000;        
+  --muted:#6b7280;       
+  --brand:#ffffff;       
+  --brand-2:#9333ea;     
+  --accent:#16a34a;      
+  --ring:rgba(37,99,235,.35);
+  --radius:18px;
+  --shadow:0 6px 20px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter: blur(10px);
+      background:rgba(15,23,42,.6); border-bottom:1px solid rgba(148,163,184,.12);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .logo{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow);}
+    .navlinks{display:flex; gap:18px; align-items:center}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:var(--radius); background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1020; font-weight:700; box-shadow:var(--shadow); border:none; cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .btn:focus{outline:3px solid var(--ring); outline-offset:2px}
+    .btn.secondary{background:#1f2937; color:var(--text); font-weight:600}
+
+    .hero{padding:64px 0 30px}
+    .hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:36px; align-items:center}
+    .headline{font-size:44px; line-height:1.12; margin:0 0 16px; letter-spacing:-.02em}
+    .lead{font-size:18px; color:var(--muted); margin:0 0 26px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(148,163,184,.18);
+      border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
+    }
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(56,189,248,.12); border:1px solid rgba(56,189,248,.28); color:var(--brand); font-weight:600; font-size:12px; letter-spacing:.02em}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+    .span-6{grid-column:span 6}
+    .span-12{grid-column:span 12}
+
+    section{padding:36px 0}
+    h2{font-size:28px; margin:0 0 14px}
+    p{margin:0 0 12px}
+
+    .project{transition:transform .2s ease, box-shadow .2s ease}
+    .project:hover{transform:translateY(-3px)}
+
+    .cta{
+      margin-top:8px; display:flex; flex-wrap:wrap; gap:12px
+    }
+
+    .donate{
+      background:linear-gradient(180deg, rgba(34,197,94,.12), rgba(34,197,94,.08));
+      border:1px solid rgba(34,197,94,.35);
+    }
+
+    .requisites{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:14px; white-space:pre-wrap; word-break:break-word}
+
+    footer{border-top:1px solid rgba(148,163,184,.12); padding:26px 0; color:var(--muted)}
+
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .headline{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <a class="pill" href="#content" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">К основному содержимому</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Крылья">
+        <div class="logo" aria-hidden="true">🪽</div>
+        <span>Крылья</span>
+      </div>
+      <nav class="navlinks" aria-label="Основная навигация">
+        <a href="#about">О проекте</a>
+        <a href="#projects">Инициативы</a>
+        <a href="#help">Как помочь</a>
+        <a href="#contacts">Контакты</a>
+        <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener" aria-label="Перейти в Telegram группу"></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="pill">Общественное движение</span>
+          <h1 class="headline">Крылья — поддержка детей в больницах и детских домах</h1>
+          <p class="lead">Мы объединяем людей, которые хотят дарить заботу и радость детям. Проект Крылья включает две инициативы: Дети Вселенной и Подарки радости.</p>
+          <div class="cta">
+            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Присоединиться в Telegram</a>
+            <a class="btn secondary" href="#help">Сделать вклад</a>
+          </div>
+        </div>
+        <div class="card" aria-label="Кратко о проектах">
+          <h2 style="margin-top:0">Две инициативы — одна цель</h2>
+          <p><strong>Дети Вселенной</strong> — благотворительный проект поддержки детей, оставшихся без попечения родителей и находящихся в больницах. Мы помогаем, чтобы у детей не формировался синдром белого потолка — чувства одиночества и изоляции.</p>
+          <p><strong>Подарки радости</strong> — создание и передача персональных подарков для ребят из детских домов и больниц, чтобы у каждого был повод улыбнуться.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container grid">
+        <div class="card span-6 project">
+          <h2>Дети Вселенной</h2>
+          <p>Поддерживаем детей, которые временно или постоянно находятся в лечебных учреждениях без родителей. Наша задача — внимание, общение и развивающие занятия, чтобы помочь справиться с тревогой и рутиной больничных стен.</p>
+          <ul>
+            <li>Тёплые визиты волонтёров</li>
+            <li>Игры, чтение, арт-терапия</li>
+            <li>Настольные и развивающие материалы</li>
+          </ul>
+        </div>
+        <div class="card span-6 project">
+          <h2>Подарки радости</h2>
+          <p>Собираем именные наборы и сюрпризы для детей из детских домов и пациентов детских отделений. Каждый подарок — знак внимания и поддержки.</p>
+          <ul>
+            <li>Сбор и упаковка подарков</li>
+            <li>Адресная передача</li>
+            <li>Фото- и видеоотчёты при согласии учреждений</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container grid">
+        <div class="span-12">
+          <h2>Как это работает</h2>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">1. Связываемся с учреждениями</h3>
+          <p>Мы поддерживаем контакт с больницами и детскими домами, чтобы понимать актуальные потребности детей.</p>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">2. Собираем волонтёров и ресурсы</h3>
+          <p>Формируем команды, распределяем задачи, собираем подарки и материалы для занятий.</p>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">3. Визиты и подарки</h3>
+          <p>Проводим встречи, игры и мастер‑классы, передаём подарки адресно и бережно.</p>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">4. Отчётность и обратная связь</h3>
+          <p>Публикуем краткие отчёты, делимся историями и благодарностями (с разрешения учреждений).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="help">
+      <div class="container grid">
+        <div class="span-12">
+          <h2>Как помочь</h2>
+        </div>
+        <div class="card span-6 donate">
+          <h3 style="margin-top:0">Реквизиты для пожертвований</h3>
+          <pre class="requisites">Получатель: <strong>ИП/Фонд \u00abКрылья\u00bb</strong>
+БИН/ИНН: 000 000 000 000
+Банк: Ваш банк
+БИК: XXXXXXXX
+IBAN/Р/с: KZ00 0000 0000 0000 0000
+Назначение платежа: Благотворительное пожертвование
+Комментарий: Имя, телефон (по желанию)</pre>
+          <div class="cta">
+            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Задать вопрос в Telegram</a>
+          </div>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">Стать волонтёром</h3>
+          <p>Присоединяйтесь к нашим выездам в больницы и детские дома. Мы обучим и поддержим.</p>
+          <ul>
+            <li>1–2 часа в неделю</li>
+            <li>Поддержка координатора</li>
+            <li>Сообщество единомышленников</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Вступить в группу</a>
+            <a class="btn secondary" href="#contacts">Оставить контакты</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="container grid">
+        <div class="span-12">
+          <h2>Контакты</h2>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">Связаться с нами</h3>
+          <p>Телефон: <a href="tel:+77000000000">+7 (700) 000‑00‑00</a></p>
+          <p>E‑mail: <a href="mailto:hello@krylya.org">hello@krylya.org</a></p>
+          <p>Telegram: <a href="https://t.me/krylyia" target="_blank" rel="noopener">@krylyia</a></p>
+        </div>
+        <div class="card span-6">
+          <h3 style="margin-top:0">Форма обратной связи</h3>
+          <form id="contact-form" onsubmit="sendMsg(event)">
+            <label for="name">Ваше имя</label><br>
+            <input id="name" name="name" required style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0b1228; color:var(--text)" />
+            <label for="email">E‑mail или телефон</label><br>
+            <input id="email" name="email" required style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0b1228; color:var(--text)" />
+            <label for="message">Сообщение</label><br>
+            <textarea id="message" name="message" rows="4" style="width:100%; margin:6px 0 12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0b1228; color:var(--text)"></textarea>
+            <button class="btn" type="submit">Отправить</button>
+            <p id="form-status" class="muted" style="color:var(--muted); margin-top:10px"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Крылья. Все права защищены.</div>
+      <div>Мы в Telegram: <a href="https://t.me/krylyia" target="_blank" rel="noopener">@krylyia</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendMsg(e){
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Спасибо! Мы получили ваше сообщение и скоро свяжемся.';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
