@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Крылья — благотворительный проект</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="description" content="Крылья объединяет два общественных проекта: Дети Вселенной и Подарки радости, направленные на поддержку детей из больниц и детских домов." />
-  <meta property="og:title" content="Крылья — благотворительный проект" />
-  <meta property="og:description" content="Поддержка детей в больницах и детских домах: Дети Вселенной и Подарки радости." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/edf2ff/0a0a0a&text=%D0%9A%D1%80%D1%8B%D0%BB%D1%8C%D1%8F" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Крылья — благотворительный проект</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Крылья объединяет два общественных проекта: Дети Вселенной и Подарки радости, направленные на поддержку детей из больниц и детских домов." name="description"/>
+<meta content="Крылья — благотворительный проект" property="og:title"/>
+<meta content="Поддержка детей в больницах и детских домах: Дети Вселенной и Подарки радости." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://dummyimage.com/1200x630/edf2ff/0a0a0a&amp;text=%D0%9A%D1%80%D1%8B%D0%BB%D1%8C%D1%8F" property="og:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
 :root{
   --bg:#f9fafb;          
   --panel:#ffffff;       
-  --text:#000000;        
+  --text:#333333;        
   --muted:#6b7280;       
   --brand:#0011ff;       
   --brand-2:#9333ea;     
@@ -40,10 +41,7 @@
     a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter: blur(10px);
-      background:rgba(15,23,42,.6); border-bottom:1px solid rgba(148,163,184,.12);
-    }
+    header{position:sticky; top:0; z-index:50; background:#3a6ea5; border-bottom:1px solid rgba(0,0,0,.05);}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:700}
     .logo{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow);}
@@ -102,140 +100,140 @@
       .btn{padding:8px 12px; font-size:14px}
       .container{padding:0 12px}
     }
-  </style>
+  
+header .nav a{color:#ffffff !important}
+header .nav a.btn{background:#ffffff; color:#3a6ea5 !important}
+header .nav a.btn:hover{filter:brightness(0.95)}
+header .brand, header .nav, header, header *{color:#ffffff}
+.partners.card{display:flex; align-items:center; gap:16px}
+.partners .partner-item{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+.partners img{max-height:40px; border-radius:8px; border:1px solid rgba(0,0,0,.08)}
+</style>
 </head>
 <body>
-  <a class="pill" href="#content" style="position:absolute; left:-9999px;">К основному содержимому</a>
-
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Крылья">
-        <div class="logo" aria-hidden="true">
-        <img src="favicon-32x32.png">
-      </div>
-      <nav class="navlinks" aria-label="Основная навигация">
-        <a href="#about">О проекте</a>
-        <a href="#projects">Инициативы</a>
-        <a href="#help">Как помочь</a>
-        <a href="#contacts">Контакты</a>
-        <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Telegram</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="content">
-    <section class="hero">
-      <div class="container wrap">
-        <div>
-          <span class="pill">Общественное движение</span>
-          <h1 class="headline">Крылья — поддержка детей в больницах и детских домах</h1>
-          <p class="lead">Мы объединяем людей, которые хотят дарить заботу и радость детям. Проект Крылья включает две инициативы: Дети Вселенной и Подарки радости.</p>
-          <div class="cta">
-            <a class="btn" href="https://t.me/krylyia" target="_blank" rel="noopener">Присоединиться в Telegram</a>
-            <a class="btn" href="#help">Сделать вклад</a>
-          </div>
-        </div>
-        <div class="card">
-          <h2 style="margin-top:0">Две инициативы — одна цель</h2>
-          <p><strong>Дети Вселенной</strong> — благотворительный проект поддержки детей, оставшихся без попечения родителей и находящихся в больницах.</p>
-          <p><strong>Подарки радости</strong> — создание и передача персональных подарков для ребят из детских домов и больниц.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container grid">
-        <div class="card span-6 project">
-          <h2>Дети Вселенной</h2>
-          <p>Поддерживаем детей, которые временно или постоянно находятся в лечебных учреждениях без родителей.</p>
-        </div>
-        <div class="card span-6 project">
-          <h2>Подарки радости</h2>
-          <p>Собираем именные наборы и сюрпризы для детей из детских домов и пациентов детских отделений.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container grid">
-        <div class="span-12">
-          <h2>Как это работает</h2>
-        </div>
-        <div class="card span-6">
-          <h3>1. Связываемся с учреждениями</h3>
-          <p>Мы поддерживаем контакт с больницами и детскими домами.</p>
-        </div>
-        <div class="card span-6">
-          <h3>2. Собираем волонтёров</h3>
-          <p>Формируем команды, распределяем задачи, собираем подарки и материалы.</p>
-        </div>
-        <div class="card span-6">
-          <h3>3. Визиты и подарки</h3>
-          <p>Проводим встречи, игры и мастер‑классы, передаём подарки.</p>
-        </div>
-        <div class="card span-6">
-          <h3>4. Отчётность и обратная связь</h3>
-          <p>Публикуем отчёты, делимся историями и благодарностями.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="help">
-      <div class="container grid">
-        <div class="span-12">
-          <h2>Как помочь</h2>
-        </div>
-        <div class="card span-6 donate">
-          <h3>Реквизиты для пожертвований</h3>
-          <pre class="requisites">Получатель: Кучеров Андрей Сергеевич
+<a class="pill" href="#content" style="position:absolute; left:-9999px;">К основному содержимому</a>
+<header>
+<div class="container nav">
+<div aria-label="Крылья" class="brand">
+<a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><div aria-hidden="true" class="logo">
+<img src="favicon-32x32.png"/>
+</div></a>
+<nav aria-label="Основная навигация" class="navlinks">
+<a href="#about">О проекте</a>
+<a href="#projects">Инициативы</a>
+<a href="#help">Как помочь</a>
+<a href="#contacts">Контакты</a>
+<a class="btn" href="https://t.me/krylyia" rel="noopener" target="_blank">Telegram</a>
+</nav>
+</div>
+</div></header>
+<main id="content">
+<section class="hero">
+<div class="container wrap">
+<div>
+<span class="pill">Общественная инициатива</span>
+<h1 class="headline">Крылья — поддержка детей в больницах и детских домах</h1>
+<p class="lead">Мы объединяем людей, которые хотят дарить заботу и радость детям. Проект Крылья включает две инициативы: Дети Вселенной и Подарки радости.</p>
+<div class="cta">
+<a class="btn" href="https://t.me/krylyia" rel="noopener" target="_blank">Присоединиться в Telegram</a>
+<a class="btn" href="#help">Сделать вклад</a>
+</div>
+</div>
+<div class="card">
+<h2 style="margin-top:0">Две инициативы — одна цель</h2>
+<p><strong>Дети Вселенной</strong> — благотворительный проект поддержки детей, оставшихся без попечения родителей и находящихся в больницах.</p>
+<p><strong>Подарки радости</strong> — создание и передача персональных подарков для ребят из детских домов и больниц.</p>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="container grid">
+<div class="card span-6 project">
+<h2>Дети Вселенной</h2>
+<p>Поддерживаем детей, которые временно или постоянно находятся в лечебных учреждениях без родителей.</p>
+</div>
+<div class="card span-6 project">
+<h2>Подарки радости</h2>
+<p>Собираем именные наборы и сюрпризы для детей из детских домов и пациентов детских отделений.</p>
+</div>
+<div class="card span-12 partners"><h3>Наши партнёры</h3><div class="partner-item"><img alt="Логотип фонда (placeholder)" src="https://dummyimage.com/140x40/eeeeee/555555&amp;text=Logo"/><p>Сотрудничаем с фондом «Дети Вселенной»</p></div></div></div>
+</section>
+<section id="projects">
+<div class="container grid">
+<div class="span-12">
+<h2>Как это работает</h2>
+</div>
+<div class="card span-6">
+<h3>1. Связываемся с учреждениями</h3>
+<p>Мы поддерживаем контакт с больницами и детскими домами.</p>
+</div>
+<div class="card span-6">
+<h3>2. Собираем волонтёров</h3>
+<p>Формируем команды, распределяем задачи, собираем подарки и материалы.</p>
+</div>
+<div class="card span-6">
+<h3>3. Визиты и подарки</h3>
+<p>Проводим встречи, игры и мастер‑классы, передаём подарки.</p>
+</div>
+<div class="card span-6">
+<h3>4. Отчётность и обратная связь</h3>
+<p>Публикуем отчёты, делимся историями и благодарностями.</p>
+</div>
+</div>
+</section>
+<section id="help">
+<div class="container grid">
+<div class="span-12">
+<h2>Как помочь</h2>
+</div>
+<div class="card span-6 donate">
+<h3>Реквизиты для пожертвований</h3>
+<pre class="requisites">Получатель: Кучеров Андрей Сергеевич
 Банк: СберБанк
 Номер Карты: 2202 2024 5791 8534
 Номер телефона: +79213850277
 Назначение: Благотворительное пожертвование</pre>
-        </div>
-        <div class="card span-6">
-          <h3>Стать волонтёром</h3>
-          <p>Присоединяйтесь к нашим выездам в больницы и детские дома.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacts">
-      <div class="container grid">
-        <div class="span-12">
-          <h2>Контакты</h2>
-        </div>
-        <div class="card span-6">
-          <h3>Связаться с нами</h3>
-          <p>Телефон: <a href="tel:+77000000000">+7 (700) 000‑00‑00</a></p>
-          <p>E‑mail: <a href="mailto:hello@krylya.org">hello@krylya.org</a></p>
-          <p>Telegram: <a href="https://t.me/krylyia" target="_blank" rel="noopener">@krylyia</a></p>
-        </div>
-        <div class="card span-6">
-          <h3>Форма обратной связи</h3>
-          <form id="contact-form" onsubmit="sendMsg(event)">
-            <label for="name">Ваше имя</label><br>
-            <input id="name" name="name" required style="width:100%; margin:6px 0 12px; padding:10px 12px;" />
-            <label for="email">E‑mail или телефон</label><br>
-            <input id="email" name="email" required style="width:100%; margin:6px 0 12px; padding:10px 12px;" />
-            <label for="message">Сообщение</label><br>
-            <textarea id="message" name="message" rows="4" style="width:100%; margin:6px 0 12px; padding:10px 12px;"></textarea>
-            <button class="btn" type="submit">Отправить</button>
-            <p id="form-status" class="muted"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
-      <div>© <span id="year"></span> Крылья. Все права защищены.</div>
-      <div>Мы в Telegram: <a href="https://t.me/krylyia" target="_blank" rel="noopener">@krylyia</a></div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+<div class="card span-6">
+<h3>Стать волонтёром</h3>
+<p>Присоединяйтесь к нашим выездам в больницы и детские дома.</p>
+</div>
+</div>
+</section>
+<section id="contacts">
+<div class="container grid">
+<div class="span-12">
+<h2>Контакты</h2>
+</div>
+<div class="card span-6">
+<h3>Связаться с нами</h3>
+<p>Телефон: <a href="tel:+77000000000">+7 (700) 000‑00‑00</a></p>
+<p>E‑mail: <a href="mailto:hello@krylya.org">hello@krylya.org</a></p>
+<p>Telegram: <a href="https://t.me/krylyia" rel="noopener" target="_blank">@krylyia</a></p>
+</div>
+<div class="card span-6">
+<h3>Форма обратной связи</h3>
+<form id="contact-form" onsubmit="sendMsg(event)">
+<label for="name">Ваше имя</label><br/>
+<input id="name" name="name" required="" style="width:100%; margin:6px 0 12px; padding:10px 12px;"/>
+<label for="email">E‑mail или телефон</label><br/>
+<input id="email" name="email" required="" style="width:100%; margin:6px 0 12px; padding:10px 12px;"/>
+<label for="message">Сообщение</label><br/>
+<textarea id="message" name="message" rows="4" style="width:100%; margin:6px 0 12px; padding:10px 12px;"></textarea>
+<button class="btn" type="submit">Отправить</button>
+<p class="muted" id="form-status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
+<div>© <span id="year"></span> Крылья. Все права защищены.</div>
+<div>Мы в Telegram: <a href="https://t.me/krylyia" rel="noopener" target="_blank">@krylyia</a></div>
+</div>
+</footer>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
     function sendMsg(e){
